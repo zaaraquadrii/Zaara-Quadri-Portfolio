@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowUpRight, Check, ChevronRight, CircleDot, Code2, Download, ExternalLink, Menu, MessageCircle, Network, Play, RotateCcw, Send, Sparkles, X } from 'lucide-react';
 import { projects, skillGroups } from './data/projects';
+import logo from '../zaaraquadri.jpeg';
 import './styles.css';
 
 const navItems = ['About', 'Experience', 'Projects', 'Skills', 'Learning', 'Education', 'Contact'];
@@ -23,7 +24,7 @@ function App() {
       <div className="grain" />
       <header className="nav-wrap">
         <nav className="nav container" aria-label="Main navigation">
-          <button className="brand" onClick={() => jumpTo('top')}><span className="brand-mark"><img src="/zaaraquadri.jpeg" alt="Zaara Quadri" /></span><span>Zaara<span className="brand-dot">.</span></span></button>
+          <button className="brand" onClick={() => jumpTo('top')}><span className="brand-mark"><img src={logo} alt="Zaara Quadri" /></span><span>Zaara<span className="brand-dot">.</span></span></button>
           <button className="menu-toggle" aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}><Menu size={20} /></button>
           <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
             {navItems.map((item) => <button key={item} onClick={() => jumpTo(item)}>{item}</button>)}
