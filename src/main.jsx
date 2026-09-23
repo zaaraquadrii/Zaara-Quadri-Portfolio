@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { ArrowUpRight, Check, ChevronRight, CircleDot, Code2, Download, ExternalLink, Menu, MessageCircle, Network, Play, RotateCcw, Send, Sparkles, X } from 'lucide-react';
 import { projects, skillGroups } from './data/projects';
 import logo from '../zaaraquadri.jpeg';
+import resume from '../zaara quadri resume.pdf';
 import './styles.css';
 
 const navItems = ['About', 'Experience', 'Projects', 'Skills', 'Learning', 'Education', 'Contact'];
@@ -28,7 +29,7 @@ function App() {
           <button className="menu-toggle" aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}><Menu size={20} /></button>
           <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
             {navItems.map((item) => <button key={item} onClick={() => jumpTo(item)}>{item}</button>)}
-            <a className="nav-resume" href="mailto:zquadri04@gmail.com?subject=Resume%20request">Resume <ArrowUpRight size={15} /></a>
+            <a className="nav-resume" href={resume} target="_blank" rel="noreferrer">Resume <ArrowUpRight size={15} /></a>
           </div>
         </nav>
       </header>
@@ -40,7 +41,7 @@ function App() {
             <p className="hero-kicker">Software Engineer <span>/</span> Full-Stack Developer <span>/</span> AI-Enabled Solutions</p>
             <h1>Building practical software<span className="accent">,</span><br />intelligent systems<span className="accent">,</span><br />and polished experiences<span className="accent">.</span></h1>
             <p className="hero-text">I'm Zaara Quadri, a Software Engineer from Hyderabad focused on full-stack development, enterprise applications, AI/ML solutions, and user-focused products.</p>
-            <div className="hero-actions"><button className="button button-primary" onClick={() => jumpTo('projects')}>View my work <ArrowUpRight size={17} /></button><a className="button button-ghost" href="mailto:zquadri04@gmail.com?subject=Resume%20request">Download resume <Download size={16} /></a><button className="text-link" onClick={() => jumpTo('contact')}>Let's connect <ChevronRight size={16} /></button></div>
+            <div className="hero-actions"><button className="button button-primary" onClick={() => jumpTo('projects')}>View my work <ArrowUpRight size={17} /></button><a className="button button-ghost" href={resume} target="_blank" rel="noreferrer" download="Sayeda-Zaara-Quadri-Resume.pdf">Download resume <Download size={16} /></a><button className="text-link" onClick={() => jumpTo('contact')}>Let's connect <ChevronRight size={16} /></button></div>
             <div className="social-row"><a href="https://github.com/zaaraquadrii" target="_blank" rel="noreferrer"><Code2 size={17} /> github.com/zaaraquadrii</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Network size={17} /> LinkedIn</a></div>
           </div>
           <div className="hero-visual reveal reveal-delay">
@@ -64,7 +65,7 @@ function App() {
 
         <section className="section education-section container" id="education"><div className="section-intro"><span className="section-number">06</span><span className="section-rule" /><span>Education</span></div><div className="education-row"><div><h2>Deccan College of Engineering<br /><em>and Technology</em></h2><p>B.E. / Engineering — Computer Science<br />Hyderabad, Telangana, India</p></div><div className="cgpa"><span>CGPA</span><strong>8.57</strong><small>/ 10</small></div></div></section>
 
-        <section className="resume-banner container"><div><span className="mini-label">A closer look</span><h2>Interested in my<br /><em>experience?</em></h2></div><div><p>View my resume or reach out to start a conversation about software, systems, and what we could build next.</p><a className="button button-light" href="mailto:zquadri04@gmail.com?subject=Resume%20request">Request resume <ArrowUpRight size={17} /></a></div></section>
+        <section className="resume-banner container"><div><span className="mini-label">A closer look</span><h2>Interested in my<br /><em>experience?</em></h2></div><div><p>View my resume or reach out to start a conversation about software, systems, and what we could build next.</p><a className="button button-light" href={resume} target="_blank" rel="noreferrer" download="Sayeda-Zaara-Quadri-Resume.pdf">Download resume <Download size={17} /></a></div></section>
 
         <section className="section contact-section container" id="contact"><div className="section-intro"><span className="section-number">07</span><span className="section-rule" /><span>Contact</span></div><div className="contact-grid"><div><h2>Let's build<br /><em>something useful.</em></h2><p>I'm open to software engineering, full-stack development, AI-enabled applications, and technical product opportunities.</p><div className="contact-links"><a href="mailto:zquadri04@gmail.com"><span>Email</span>zquadri04@gmail.com <ArrowUpRight size={16} /></a><a href="https://github.com/zaaraquadrii" target="_blank" rel="noreferrer"><span>GitHub</span>zaaraquadrii <ArrowUpRight size={16} /></a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><span>LinkedIn</span>Zaara Quadri <ArrowUpRight size={16} /></a></div></div><ContactForm /></div></section>
       </main>
